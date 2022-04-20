@@ -148,6 +148,12 @@ class App extends Component {
   }
   toSimpleObject = (v) => JSON.parse(JSON.stringify(v))
   establishLink = async () => {
+    const blockchains = [
+      {
+        chainId: "2a02a0053e5a8cf73a56ba0fda11e4d92e0238a4a2aa74fccf46d5a910746840",
+        nodeUrl: "https://jungle3.cryptolions.io"
+      }
+    ]
     /*
       Specify the blockchains that are available to use within this application.
 
@@ -167,7 +173,8 @@ class App extends Component {
       // REQUIRED: Specify the supported chains
       chains: blockchains.map(b => ({
         chainId: b.chainId,
-        nodeUrl: `${b.rpcEndpoints[0].protocol}://${b.rpcEndpoints[0].host}:${b.rpcEndpoints[0].port}`
+        nodeUrl: b.nodeUrl
+        // nodeUrl: `${b.rpcEndpoints[0].protocol}://${b.rpcEndpoints[0].host}:${b.rpcEndpoints[0].port}`
       })),
       // ---
       // OPTIONAL: Set a custom API Client https://github.com/greymass/eosio-core/blob/master/src/api/client.ts

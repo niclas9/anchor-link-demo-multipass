@@ -49,7 +49,7 @@
     "name": "Jungle 3 (Testnet)",
     "rpcEndpoints": [{
       "protocol": "https",
-      "host": "jungle3.greymass.com",
+      "host": "jungle3.cryptolions.io",
       "port": 443
     }]
   },
